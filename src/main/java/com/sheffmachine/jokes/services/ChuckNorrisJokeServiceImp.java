@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 public class ChuckNorrisJokeServiceImp implements ChuckNorrisJokeService {
     private final ChuckNorrisQuotes chuckNorrisQuotes; // This class will be created once, and will not be created with every request.
 
-    public ChuckNorrisJokeServiceImp() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public ChuckNorrisJokeServiceImp(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
